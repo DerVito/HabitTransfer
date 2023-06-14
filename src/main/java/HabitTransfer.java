@@ -120,5 +120,20 @@ public class HabitTransfer {
 	            e.printStackTrace();
 	        }
 
+		 
+	}
+	
+	//Just a Test for Branch main
+	public static void ausgabe2(int indikator) {
+		switch(indikator) {
+		case 1:
+			System.out.println("5");
+		case 2:
+			System.out.println("6");
+		case 3:
+			System.out.println("7");
+		case 4:
+			System.out.println("8");
+		}
 	}
 }
