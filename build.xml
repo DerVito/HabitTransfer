@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." name="HabitTransfer" default="MAIN">
+
+		<target name="MAIN" depends="NR2, GET, RUN">
+			<echo>
+				Hallo
+			</echo>
+		</target>
+	
+		<target name="NR2">
+			<echo message="früher!!"/>
+		</target>
+	
+		<target name="CLEAN">
+			<echo message="deleting cleanDir directory"/>
+			<delete dir="cleanDir" />
+		</target>
+	
+		<target name="GET">
+			<echo message="loading Gson jar"/>
+			<mkdir dir="library" />
+			<get src="https://repo1.maven.org/maven2/com/google/code/gson/gson/2.8.8/gson-2.8.8.jar" dest="library/gson-2.8.8.jar" /> 
+		</target>
+	
+		<target name="COMPILE" depends="CLEAN">
+			<mkdir dir="build/classes" />
+			<javac srcdir="src" destdir="build/classes" />
+		</target>
+		
+	  	<target name="RUN" depends="COMPILE">
+	    	<java classname="HabitTransfer" classpath="build/classes" />
+	  	</target>
+	
+	  	<target name="TEST" depends="COMPILE">
+	    	<!-- Tests habe ich noch nicht entwickelt -->
+	  	</target>
+		
+		<target name="JAR" depends="COMPILE">
+			<mkdir dir="build/jar" />
+			<jar destfile="build/jar/HabitTransfer.jar" basedir="build/classes">
+  				<manifest>
+				<attribute name="HabitTransfer" value="HabitTransfer" />
+  				</manifest>
+			</jar>
+  		</target>
+	
+</project>
