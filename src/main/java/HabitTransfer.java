@@ -122,7 +122,7 @@ public class HabitTransfer {
 
 	}
 	
-	//Just a Test for Branch No. 1
+	//Just a Test for Branch ausgabe-branch
 	public static void ausgabe(int indikator) {
 		switch(indikator) {
 		case 1:
