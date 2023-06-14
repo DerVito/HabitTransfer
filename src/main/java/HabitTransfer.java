@@ -136,4 +136,18 @@ public class HabitTransfer {
 			System.out.println("8");
 		}
 	}
+	
+	//Just a Test for Branch ausgabe-branch
+	public static void ausgabe(int indikator) {
+		switch(indikator) {
+		case 1:
+			System.out.println("1");
+		case 2:
+			System.out.println("2");
+		case 3:
+			System.out.println("3");
+		case 4:
+			System.out.println("4");
+		}
+	}
 }
